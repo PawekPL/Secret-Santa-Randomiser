@@ -40,7 +40,7 @@ verify.click()
 
 time.sleep(1)
 verifym = driver.find_element_by_id('idTxtBx_SAOTCC_OTC')
-verifym.send_keys(input('Enter email code: '))
+verifym.send_keys(input('Enter code from your backup adress: '))
 verify = driver.find_element_by_id('idSubmit_SAOTCC_Continue')
 verify.click()
                   
@@ -84,7 +84,12 @@ except:
             time.sleep(15) # a break so that the seed for the generator changes
             matches = c.name_match()
             except:
-                print('''The function name_match doesn't seem to be working correctly, check if you saved the config.py file and if the number of people > 1. If neither of those were your solutions wait for a few minutes and try again. Btw you are quite lucky cause this is rare af.'''
+                print('''The function name_match doesn't seem to be working correctly,
+check if you saved the config.py file and if the number of people > 1.
+If neither of those were your solutions (you are very lucky cause this is rare af, msg me on github if it actually happens)
+wait for a few minutes and try again.
+'''
+
 print('Names have been matched')
 try:
     for match in matches: 
